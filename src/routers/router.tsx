@@ -14,6 +14,13 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/post/:id' element={<Post />} />
 
+        <Route path='/post' element={<Post />}>
+          <Route
+            path=':id'
+            element={<div style={{background: '#4444'}}>Oi</div>}
+          />
+        </Route>
+
         <Route path='/post' element={<Post />} />
       </Routes>
     </BrowserRouter>
